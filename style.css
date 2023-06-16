@@ -1,0 +1,173 @@
+html, body {
+    background-color: #ffffff;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*MC字体*/
+@font-face {
+    font-family: "mc";
+    src: url("files/font/unifont-15.0.06.ttf") format("truetype");
+}
+
+/*正常字体*/
+@font-face {
+    font-family: "sans";
+    src: url("files/font/HONORSans/HONORSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*粗体*/
+@font-face {
+    font-family: "sansc";
+    src: url("files/font/HONORSans/HONORSans-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*细体*/
+@font-face {
+    font-family: "sansx";
+    src: url("files/font/HONORSans/HONORSans-Light.ttf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+/*重体*/
+@font-face {
+    font-family: "sansz";
+    src: url("files/font/HONORSans/HONORSans-Heavy.ttf") format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+}
+
+/*超细体*/
+@font-face {
+    font-family: "sanscx";
+    src: url("files/font/HONORSans/HONORSans-Thin.ttf") format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    background-image: url("files/img/index.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+}
+
+/*标题*/
+.text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 5px 5px 5px #000000;
+    font-family: "sansc";
+	line-height: 1;
+}
+
+/*副标题*/
+.text2 {
+position    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 5px 5px 5px #000000;
+    margin: 64px 0px 0px 0px;
+    font-family: "sansc";
+	line-height: 1;
+}
+
+/*正文-板块1-标题*/
+.text3 {
+    font-size: 32px;
+    color: black;
+    font-family: "sans";
+	line-height: 1;
+}
+
+/*正文-板块1-正文*/
+.text4 {
+    font-size: 24px;
+    color: black;
+    font-family: "sans";
+	line-height: 1;
+}
+
+/*板块1*/
+.div1 {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 12px;
+    margin: 2.5%;
+    padding: 12px;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #00ffff80, #00ff8080);
+    height: 64px;
+    color: white;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    box-shadow: 5px 0px 12px #00000080;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+    display: flex; 
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    padding: 12px 12px;
+    font-family: "sans";
+}
+
+.nav-link-e {
+    text-decoration: none;
+    color: #00ff80;
+    margin: 0 10px;
+    padding: 12px 12px;
+    font-family: "sans";
+}
+
+
+.nav-links {
+    position: absolute; /* 子元素需要设置为绝对定位 */
+    top: 50%; /* 这里只是为了让子元素居中 */
+    transform: translateY(-50%);
+    right: 48px; /* 距离父元素右边的间隔 */
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}

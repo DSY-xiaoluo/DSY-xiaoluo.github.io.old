@@ -99,6 +99,14 @@ position    top: 50%;
 	line-height: 1;
 }
 
+/*正文-板块1-副标题*/
+.text5 {
+    font-size: 24px;
+    color: black;
+    font-family: "sansc";
+	line-height: 1;
+}
+
 /*正文-板块1-正文*/
 .text4 {
     font-size: 24px;
@@ -109,13 +117,23 @@ position    top: 50%;
 
 /*板块1*/
 .div1 {
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 12px;
-    margin: 2.5%;
-    padding: 12px;
-    background-color: rgb(224, 224, 224);
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+	width: 90%;
+	margin: 24px auto;
+	border-radius: 2px;
+	padding: 12px;
+	background-color: rgb(224, 224, 224);
+	box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+	transition: box-shadow 1s cubic-bezier(0, 0, 1, 1);
+}
+
+.div1:hover {
+	width: 90%;
+	margin: 24px auto;
+	border-radius: 2px;
+	padding: 12px;
+	background-color: rgb(224, 224, 224);
+	box-shadow: 0 0 24px rgba(0, 0, 0, 1);
+	transition: box-shadow 0.1s cubic-bezier(0, 0, 1, 1);
 }
 
 .navbar {
@@ -131,7 +149,25 @@ position    top: 50%;
     z-index: 9999;
     width: 100%;
     backdrop-filter: blur(2px);
-    box-shadow: 5px 0px 12px #00000080;
+    box-shadow: 5px 0px 32px #00000080;
+	transition: box-shadow 0.25s cubic-bezier(0, 0, 1, 1);
+}
+
+.navbar:hover {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #00808080, #00804080);
+    height: 64px;
+    color: white;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    box-shadow: 5px 0px 32px #000000ff;
+	transition: box-shadow 0.25s cubic-bezier(0, 0, 1, 1);
 }
 
 .logo {

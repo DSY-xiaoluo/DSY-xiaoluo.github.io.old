@@ -139,7 +139,7 @@ position    top: 50%;
 .navbar {
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, #00ffff80, #00ff8080);
+    background: linear-gradient(to right, #00ffffc0, #00ff80c0);
     height: 64px;
     color: white;
     padding: 0 20px;
@@ -148,7 +148,7 @@ position    top: 50%;
     left: 0;
     z-index: 9999;
     width: 100%;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(12px);
     box-shadow: 5px 0px 32px #00000080;
 	transition: box-shadow 0.25s cubic-bezier(0, 0, 1, 1);
 }
@@ -156,7 +156,7 @@ position    top: 50%;
 .navbar:hover {
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, #00808080, #00804080);
+    background: linear-gradient(to right, #008080c0, #008040c0);
     height: 64px;
     color: white;
     padding: 0 20px;
@@ -165,7 +165,7 @@ position    top: 50%;
     left: 0;
     z-index: 9999;
     width: 100%;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(24px);
     box-shadow: 5px 0px 32px #000000ff;
 	transition: box-shadow 0.25s cubic-bezier(0, 0, 1, 1);
 }

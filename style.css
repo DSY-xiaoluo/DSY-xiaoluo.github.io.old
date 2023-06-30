@@ -1,209 +1,219 @@
 html, body {
-    background-color: #ffffff;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+	background-color: #ffffff;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-image: url('files/img/sfpz.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	/*
+	background: linear-gradient(to right, #00ffff, #00ff80); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	*/
+
 }
 
 /*MC字体*/
 @font-face {
-    font-family: "mc";
-    src: url("files/font/unifont-15.0.06.ttf") format("truetype");
+	font-family: "mc";
+	src: url("files/font/Minecraft字体.ttf") format("truetype");
 }
 
 /*正常字体*/
 @font-face {
-    font-family: "sans";
-    src: url("files/font/HONORSans/HONORSans-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-/*粗体*/
-@font-face {
-    font-family: "sansc";
-    src: url("files/font/HONORSans/HONORSans-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-/*细体*/
-@font-face {
-    font-family: "sansx";
-    src: url("files/font/HONORSans/HONORSans-Light.ttf") format("truetype");
-    font-weight: lighter;
-    font-style: normal;
-}
-
-/*重体*/
-@font-face {
-    font-family: "sansz";
-    src: url("files/font/HONORSans/HONORSans-Heavy.ttf") format("truetype");
-    font-weight: bolder;
-    font-style: normal;
-}
-
-/*超细体*/
-@font-face {
-    font-family: "sanscx";
-    src: url("files/font/HONORSans/HONORSans-Thin.ttf") format("truetype");
-    font-weight: bolder;
-    font-style: normal;
+	font-family: "sans";
+	src: url("files/font/SourceHanSansSC-Light-2.otf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
 .container {
-    position: relative;
-    height: 100%;
-    background-image: url("files/img/index.jpg");
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+	position: relative;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /*标题*/
 .text1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 32px;
-    text-shadow: 5px 5px 5px #000000;
-    font-family: "sansc";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-size: 32px;
+	text-shadow: 5px 5px 5px #000000;
+	font-family: "sans";
 	line-height: 1;
 }
 
 /*副标题*/
 .text2 {
-position    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 24px;
-    text-shadow: 5px 5px 5px #000000;
-    margin: 64px 0px 0px 0px;
-    font-family: "sansc";
+	position top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-size: 24px;
+	text-shadow: 5px 5px 5px #000000;
+	margin: 64px 0px 0px 0px;
+	font-family: "sans";
 	line-height: 1;
 }
 
 /*正文-板块1-标题*/
 .text3 {
-    font-size: 32px;
-    color: black;
-    font-family: "sans";
+	font-size: 32px;
+	color: black;
+	font-family: "sans";
 	line-height: 1;
 }
 
 /*正文-板块1-副标题*/
 .text5 {
-    font-size: 24px;
-    color: black;
-    font-family: "sansc";
+	font-size: 24px;
+	color: black;
+	font-family: "sans";
 	line-height: 1;
 }
 
 /*正文-板块1-正文*/
 .text4 {
-    font-size: 24px;
-    color: black;
-    font-family: "sans";
+	font-size: 24px;
+	color: black;
+	font-family: "sans";
 	line-height: 1;
 }
 
 /*板块1*/
 .div1 {
-	width: 90%;
-	margin: 24px auto;
+	width: calc(100% - 48px);
+	margin: 12px auto;
 	border-radius: 2px;
 	padding: 12px;
-	background-color: rgb(224, 224, 224);
+	background-color: rgba(224, 224, 224, 0.75);
 	box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
 	transition: box-shadow 1s cubic-bezier(0, 0, 1, 1);
+	backdrop-filter: blur(6px);
 }
 
 .div1:hover {
-	width: 90%;
-	margin: 24px auto;
-	border-radius: 2px;
-	padding: 12px;
-	background-color: rgb(224, 224, 224);
 	box-shadow: 0 0 24px rgba(0, 0, 0, 1);
 	transition: box-shadow 0.1s cubic-bezier(0, 0, 1, 1);
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to right, #00ffffc0, #00ff80c0);
-    height: 64px;
-    color: white;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
-    backdrop-filter: blur(12px);
-    box-shadow: 5px 0px 32px #00000080;
-	transition: box-shadow 0.25s cubic-bezier(0, 0, 1, 1);
+	display: flex;
+	align-items: center;
+	background: linear-gradient(to right, #00ffffc0, #00ff80c0);
+	height: 64px;
+	color: white;
+	padding: 0 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	backdrop-filter: blur(6px);
+	box-shadow: 5px 0px 32px #00000080;
+	transition: background 0.25s ease-in-out, backdrop-filter 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
 .navbar:hover {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to right, #008080c0, #008040c0);
-    height: 64px;
-    color: white;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
-    backdrop-filter: blur(24px);
-    box-shadow: 5px 0px 32px #000000ff;
-	transition: box-shadow 0.25s cubic-bezier(0, 0, 1, 1);
+	background: linear-gradient(to right, #008080c0, #008040c0);
+	backdrop-filter: blur(12px);
+	box-shadow: 5px 0px 32px #000000ff;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: auto;
-    display: flex; 
+	font-size: 24px;
+	font-weight: bold;
+	margin-right: auto;
+	display: flex; 
 }
 
 .nav-link {
-    text-decoration: none;
-    color: white;
-    margin: 0 10px;
-    padding: 12px 12px;
-    font-family: "sans";
+	text-decoration: none;
+	color: white;
+	margin: 0 10px;
+	padding: 12px 12px;
+	font-family: "sans";
+	font-size: 12px;
 }
 
 .nav-link-e {
-    text-decoration: none;
-    color: #00ff80;
-    margin: 0 10px;
-    padding: 12px 12px;
-    font-family: "sans";
+	text-decoration: none;
+	color: #00ff80;
+	margin: 0 10px;
+	padding: 12px 12px;
+	font-family: "sans";
+	font-size: 12px;
+	text-shadow: 2px 2px 5px #000000;
 }
 
 
 .nav-links {
-    position: absolute; /* 子元素需要设置为绝对定位 */
-    top: 50%; /* 这里只是为了让子元素居中 */
-    transform: translateY(-50%);
-    right: 48px; /* 距离父元素右边的间隔 */
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
+	position: absolute; /* 子元素需要设置为绝对定位 */
+	top: 50%; /* 这里只是为了让子元素居中 */
+	transform: translateY(-50%);
+	right: 48px; /* 距离父元素右边的间隔 */
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	text-shadow:2px 2px 5px #00000080;
 }
 
 .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
 }
+
+.toast {
+	position: fixed;
+	top: 74px;
+	right: 10px;
+	padding: 12px;
+	background-color: rgba(255, 255, 0, 0.75);
+	color: #000;
+	border-radius: 2px;
+	z-index: 9999;
+	box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+	transition: box-shadow 1s cubic-bezier(0, 0, 1, 1);
+	backdrop-filter: blur(6px);
+	font-family: "sans";
+	font-size: 24px;
+	animation: slideOutRight 1s forwards;  /* 使用动画slideOutRight，并保持最终状态 */
+	transform: translateX(0);  /* 初始位置为屏幕内 */
+	animation-delay: 10s;  /* 延迟后执行动画 */
+}
+
+.toast:hover {
+	box-shadow: 0 0 24px rgba(0, 0, 0, 1);
+	transition: box-shadow 0.1s cubic-bezier(0, 0, 1, 1);
+}
+
+.hidden {
+  display: none;
+}
+
+.close{
+	font-family: "sans";
+	font-size: 24px;
+	background-color: rgb(255, 255, 0);
+}
+
+@keyframes slideOutRight {
+	0% {
+		transform: translateX(0);  /* 初始位置为屏幕内 */
+	}
+	100% {
+		transform: translateX(calc(100% + 10px));  /* 最终位置为屏幕外 */
+	}
+}
+
+	.sj {
+		list-style-type: none;
+		padding-left: 20px;
+	}

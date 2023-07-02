@@ -9,7 +9,7 @@ html, body {
 	background-position: center center;
 	background-attachment: fixed;
 	/*
-	background: linear-gradient(to right, #00ffff, #00ff80); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #00ffff, #00ff80); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
 	*/
 
 }
@@ -24,6 +24,14 @@ html, body {
 @font-face {
 	font-family: "sans";
 	src: url("files/font/SourceHanSansSC-Light-2.otf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*微软雅黑*/
+@font-face {
+	font-family: "msyh";
+	src: url("files/font/msyh.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -87,6 +95,83 @@ html, body {
 	font-family: "sans";
 	line-height: 1;
 }
+
+/*VistaDiv-首*/
+.vista1 {
+	border-radius: 5px;
+	border: 1px solid #404040;
+	width: 90%;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	margin: 20px auto;
+}
+
+.vista1:hover {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+.vista2{
+	border-radius: 5px;
+	border: 1px solid #e8e8e8;
+	padding: 2px;
+	background-color: rgba(128, 128, 128, 0);
+	backdrop-filter: blur(3px);
+}
+
+.vista3 {
+	display: inline-block;
+	margin: 3px;
+	text-shadow: 0px 0px 20px #fff;
+	font-family: "msyh";
+	font-size: 12px;
+}
+
+
+.vista4{
+	border-radius: 2px;
+	border: 1px solid #c0c0c0;
+	margin: 2px;
+}
+
+.vista5{
+	border: 1px solid #404040;
+	background-color: #e8e8e8;
+	padding: 10px;
+}
+
+.navbarvista {
+	right: 0px;
+	left: 0px;
+	background-color: rgba(128, 128, 128, 0);
+	color: white;
+	position: fixed;
+	z-index: 9999;
+	backdrop-filter: blur(3px);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+	border-radius: 5px;
+	border: 1px solid #404040;
+	margin: 5px;
+}
+
+.navbarvista2{
+	border-radius: 5px;
+	border: 1px solid #e8e8e8;
+	padding: 2px;
+	background-color: rgba(128, 128, 128, 0);
+	height: 64px;
+}
+
+.navbarvista5{
+	border: 1px solid #404040;
+}
+
+.ggvista1 {
+	border-radius: 5px;
+	border: 1px solid #404040;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	margin: 20px auto;
+}
+
+/*VistaDiv-尾*/
 
 /*板块1*/
 .div1 {
@@ -159,8 +244,7 @@ html, body {
 	position: absolute; /* 子元素需要设置为绝对定位 */
 	top: 50%; /* 这里只是为了让子元素居中 */
 	transform: translateY(-50%);
-	right: 48px; /* 距离父元素右边的间隔 */
-	height: 50px;
+	right: 32px; /* 距离父元素右边的间隔 */
 	text-align: center;
 	line-height: 50px;
 	text-shadow:2px 2px 5px #00000080;
@@ -172,8 +256,8 @@ html, body {
 
 .toast {
 	position: fixed;
-	top: 74px;
-	right: 10px;
+	top: 81px;
+	right: 5px;
 	padding: 12px;
 	background-color: rgba(255, 255, 0, 0.75);
 	color: #000;

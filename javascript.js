@@ -1,24 +1,38 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // 获取DOM元素
-  const toastDiv = document.getElementById('toastDiv');
-  const closeBtn = document.querySelector('.close');
+// 获取所有具有 ggvista1 class 的 div 元素
+var vistaDivs = document.querySelectorAll('.ggvista1');
 
-  // 显示通知
-  function showToast() {
-	toastDiv.classList.remove('hidden');
+// 为每个 div 元素添加拖动功能
+vistaDivs.forEach(function(div) {
+  var offsetX = 0;
+  var offsetY = 0;
+  var isDragging = false;
+
+  function dragStart(e) {
+    // 计算鼠标或触摸点相对于 div 的偏移量
+    offsetX = e.clientX - div.offsetLeft;
+    offsetY = e.clientY - div.offsetTop;
+    isDragging = true;
+	document.documentElement.style.userSelect = 'none';
   }
 
-  // 关闭通知
-  function closeToast() {
-	toastDiv.classList.add('hidden');
+  function dragMove(e) {
+    if (isDragging) {
+      // 更新 div 的位置
+      div.style.left = (e.clientX - offsetX) + 'px';
+      div.style.top = (e.clientY - offsetY) + 'px';
+    }
   }
 
-  // 添加动画结束事件监听器
-  toastDiv.addEventListener('animationend', closeToast);
+  function dragEnd() {
+    isDragging = false;
+	document.documentElement.style.userSelect = 'auto';
+  }
 
-  // 监听关闭按钮点击事件
-  closeBtn.addEventListener('click', closeToast);
-
-  // 在适当的时机调用showToast()函数显示通知
-  showToast();
+  // 绑定事件
+  div.addEventListener('mousedown', dragStart);
+  div.addEventListener('touchstart', dragStart);
+  window.addEventListener('mousemove', dragMove);
+  window.addEventListener('touchmove', dragMove);
+  window.addEventListener('mouseup', dragEnd);
+  window.addEventListener('touchend', dragEnd);
 });

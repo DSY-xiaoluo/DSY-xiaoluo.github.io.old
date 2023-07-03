@@ -3,7 +3,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-image: url('files/img/sfpz.png');
+	background-image: url('https://pic.imgdb.cn/item/64a2fdf31ddac507ccb8c5f9.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -120,9 +120,10 @@ html, body {
 .vista3 {
 	display: inline-block;
 	margin: 3px;
-	text-shadow: 0px 0px 20px #fff;
+	text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff;
 	font-family: "msyh";
 	font-size: 12px;
+	height: 16px;
 }
 
 
@@ -152,6 +153,10 @@ html, body {
 	margin: 5px;
 }
 
+.navbarvista:hover {
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 1);
+}
+
 .navbarvista2{
 	border-radius: 5px;
 	border: 1px solid #e8e8e8;
@@ -169,6 +174,10 @@ html, body {
 	border: 1px solid #404040;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 	margin: 20px auto;
+}
+
+.ggvista1:hover {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
 
 /*VistaDiv-尾*/
@@ -253,51 +262,3 @@ html, body {
 .nav-link:hover {
 	background-color: rgba(255, 255, 255, 0.5);
 }
-
-.toast {
-	position: fixed;
-	top: 81px;
-	right: 5px;
-	padding: 12px;
-	background-color: rgba(255, 255, 0, 0.75);
-	color: #000;
-	border-radius: 2px;
-	z-index: 9999;
-	box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
-	transition: box-shadow 1s cubic-bezier(0, 0, 1, 1);
-	backdrop-filter: blur(6px);
-	font-family: "sans";
-	font-size: 24px;
-	animation: slideOutRight 1s forwards;  /* 使用动画slideOutRight，并保持最终状态 */
-	transform: translateX(0);  /* 初始位置为屏幕内 */
-	animation-delay: 10s;  /* 延迟后执行动画 */
-}
-
-.toast:hover {
-	box-shadow: 0 0 24px rgba(0, 0, 0, 1);
-	transition: box-shadow 0.1s cubic-bezier(0, 0, 1, 1);
-}
-
-.hidden {
-  display: none;
-}
-
-.close{
-	font-family: "sans";
-	font-size: 24px;
-	background-color: rgb(255, 255, 0);
-}
-
-@keyframes slideOutRight {
-	0% {
-		transform: translateX(0);  /* 初始位置为屏幕内 */
-	}
-	100% {
-		transform: translateX(calc(100% + 10px));  /* 最终位置为屏幕外 */
-	}
-}
-
-	.sj {
-		list-style-type: none;
-		padding-left: 20px;
-	}

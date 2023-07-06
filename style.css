@@ -74,7 +74,7 @@ html, body {
 
 /*正文-板块1-标题*/
 .text3 {
-	font-size: 32px;
+	font-size: 24px;
 	color: black;
 	font-family: "sans";
 	line-height: 1;
@@ -82,7 +82,7 @@ html, body {
 
 /*正文-板块1-副标题*/
 .text5 {
-	font-size: 24px;
+	font-size: 18px;
 	color: black;
 	font-family: "sans";
 	line-height: 1;
@@ -90,7 +90,7 @@ html, body {
 
 /*正文-板块1-正文*/
 .text4 {
-	font-size: 24px;
+	font-size: 16px;
 	color: black;
 	font-family: "sans";
 	line-height: 1;
@@ -114,7 +114,7 @@ html, body {
 	border: 1px solid #e8e8e8;
 	padding: 2px;
 	backdrop-filter: blur(3px);
-	background: url('https://pic.imgdb.cn/item/64a489b31ddac507cc4f6626.png'), linear-gradient(transparent 20%,#ffffffd9 36%,transparent 36%), linear-gradient(90deg,#ffffff64,rgb(255 255 255 / 0%),#ffffff64), linear-gradient(55deg,transparent,rgb(255 255 255 / 0%) 20%,rgb(255 255 255 / 0%) 50%,#ffffff00 20%),#2ea9ff40;
+	background: url(https://pic.imgdb.cn/item/64a489b31ddac507cc4f6626.png), linear-gradient(transparent 20%,#ffffffd9 36%,transparent 36%), linear-gradient(90deg,#ffffff64,rgb(255 255 255 / 0%),#ffffff64), linear-gradient(55deg,transparent,rgb(255 255 255 / 0%) 20%,rgb(255 255 255 / 0%) 50%,#ffffff00 20%),#2ea9ff40;
 	background-position-x: 0%, 0%, 0%, 0%, 0%;
 	background-position-y: 0%, 0%, 0%, 0%, 0%;
 	background-repeat: repeat, repeat, repeat, repeat, repeat;
@@ -186,6 +186,32 @@ html, body {
 
 .ggvista1:hover {
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+.zxh {
+	background: url("https://pic.imgdb.cn/item/64a66f2c1ddac507ccbe4674.png") no-repeat;
+		background-position-x: 0%;
+		background-position-y: 0%;
+	border-radius: 0px 0px 5px 5px;
+	width: 30px;
+	height: 18px;
+	cursor: pointer;
+	float: right;
+	position: relative;
+	margin-top: -3px;
+	margin-right: 3px;
+}
+
+.zxh:hover{
+	--moz-box-shadow: 
+	0px 0px 5px #00b1ff,
+	0px 0px 10px #00e5ff;
+	-webkit-box-shadow: 
+	0px 0px 5px #00b1ff,
+	0px 0px 10px #00e5ff;
+	box-shadow: 
+	0px 0px 5px #00b1ff,
+	0px 0px 10px #00e5ff;
 }
 
 /*VistaDiv-尾*/

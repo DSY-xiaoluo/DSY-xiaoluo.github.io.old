@@ -36,3 +36,17 @@ vistaDivs.forEach(function(div) {
   window.addEventListener('mouseup', dragEnd);
   window.addEventListener('touchend', dragEnd);
 });
+
+  // 获取按钮和要隐藏的 <div> 元素
+  var hideBtn = document.getElementById("zxh");
+  var targetDiv = document.getElementById("ad");
+
+  // 添加点击事件监听器
+  hideBtn.addEventListener("click", function() {
+    // 切换显示/隐藏状态
+    if (targetDiv.style.display === "none") {
+      targetDiv.style.display = "block";
+    } else {
+      targetDiv.style.display = "none";
+    }
+  });

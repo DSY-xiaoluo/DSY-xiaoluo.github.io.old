@@ -1,3 +1,5 @@
+// div拖动 - 首
+
 // 获取所有具有 ggvista1 class 的 div 元素
 var vistaDivs = document.querySelectorAll('.ggvista1');
 
@@ -8,45 +10,72 @@ vistaDivs.forEach(function(div) {
   var isDragging = false;
 
   function dragStart(e) {
-    // 计算鼠标或触摸点相对于 div 的偏移量
-    offsetX = e.clientX - div.offsetLeft;
-    offsetY = e.clientY - div.offsetTop;
+    if (e.type === 'touchstart') {
+      // 计算拖动起始位置（触摸设备）
+      offsetX = e.touches[0].clientX - div.offsetLeft;
+      offsetY = e.touches[0].clientY - div.offsetTop;
+    } else {
+      // 计算拖动起始位置（鼠标设备）
+      offsetX = e.clientX - div.offsetLeft;
+      offsetY = e.clientY - div.offsetTop;
+    }
+
     isDragging = true;
-	document.documentElement.style.userSelect = 'none';
+    // 禁用用户选择文本
+    document.documentElement.style.userSelect = 'none';
   }
 
   function dragMove(e) {
+    e.preventDefault();
     if (isDragging) {
-      // 更新 div 的位置
-      div.style.left = (e.clientX - offsetX) + 'px';
-      div.style.top = (e.clientY - offsetY) + 'px';
+      var clientX, clientY;
+      if (e.type === 'touchmove') {
+        // 计算拖动中的位置（触摸设备）
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+      } else {
+        // 计算拖动中的位置（鼠标设备）
+        clientX = e.clientX;
+        clientY = e.clientY;
+      }
+
+      // 设置 div 的新位置
+      div.style.left = (clientX - offsetX) + 'px';
+      div.style.top = (clientY - offsetY - 20) + 'px';
     }
   }
 
   function dragEnd() {
     isDragging = false;
-	document.documentElement.style.userSelect = 'auto';
+    // 启用用户选择文本
+    document.documentElement.style.userSelect = 'auto';
   }
 
   // 绑定事件
-  div.addEventListener('mousedown', dragStart);
-  div.addEventListener('touchstart', dragStart);
-  window.addEventListener('mousemove', dragMove);
-  window.addEventListener('touchmove', dragMove);
-  window.addEventListener('mouseup', dragEnd);
-  window.addEventListener('touchend', dragEnd);
+  div.addEventListener('mousedown', dragStart); // 鼠标按下事件
+  div.addEventListener('touchstart', dragStart); // 触摸开始事件
+  window.addEventListener('mousemove', dragMove); // 鼠标移动事件
+  window.addEventListener('touchmove', dragMove); // 触摸移动事件
+  window.addEventListener('mouseup', dragEnd); // 鼠标松开事件
+  window.addEventListener('touchend', dragEnd); // 触摸结束事件
 });
 
-  // 获取按钮和要隐藏的 <div> 元素
-  var hideBtn = document.getElementById("zxh");
-  var targetDiv = document.getElementById("ad");
+// div拖动 - 尾
 
-  // 添加点击事件监听器
-  hideBtn.addEventListener("click", function() {
-    // 切换显示/隐藏状态
-    if (targetDiv.style.display === "none") {
-      targetDiv.style.display = "block";
-    } else {
-      targetDiv.style.display = "none";
-    }
-  });
+// div隐藏 - 首
+
+// 获取按钮和要隐藏的 <div> 元素
+var hideBtn = document.getElementById("zxh");
+var targetDiv = document.getElementById("ad");
+
+// 添加点击事件监听器
+hideBtn.addEventListener("click", function() {
+  // 切换显示/隐藏状态
+  if (targetDiv.style.display === "none") {
+    targetDiv.style.display = "block";
+  } else {
+    targetDiv.style.display = "none";
+  }
+});
+
+// div隐藏 - 尾

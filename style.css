@@ -110,16 +110,14 @@ html, body {
 }
 
 .vista2{
+	
 	border-radius: 5px;
 	border: 1px solid #e8e8e8;
 	padding: 2px;
 	backdrop-filter: blur(3px);
 	background: url(https://pic.imgdb.cn/item/64a489b31ddac507cc4f6626.png), linear-gradient(transparent 20%,#ffffffd9 36%,transparent 36%), linear-gradient(90deg,#ffffff64,rgb(255 255 255 / 0%),#ffffff64), linear-gradient(55deg,transparent,rgb(255 255 255 / 0%) 20%,rgb(255 255 255 / 0%) 50%,#ffffff00 20%),#2ea9ff40;
-	background-position-x: 0%, 0%, 0%, 0%, 0%;
-	background-position-y: 0%, 0%, 0%, 0%, 0%;
-	background-repeat: repeat, repeat, repeat, repeat, repeat;
-	background-attachment: scroll, scroll, scroll, scroll, scroll;
-	background-size: auto, auto, auto, auto, auto;
+	background-size: cover;
+	background-attachment: fixed,local,local;
 }
 
 .vista3 {
@@ -170,6 +168,7 @@ html, body {
 	height: 64px;
 	background-image: url('https://pic.imgdb.cn/item/64a489b31ddac507cc4f6626.png');
 	background-size: cover;
+	background-attachment: fixed,local,local;
 }
 
 .navbarvista5{
@@ -182,6 +181,7 @@ html, body {
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 	margin: 20px auto;
 	margin-right: 5px;
+	position: fixed;
 }
 
 .ggvista1:hover {

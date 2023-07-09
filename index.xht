@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<html xmlns="http://www.w3.org/1999/xhtml" data-l10n-sync="true" dir="ltr" lang="zh-CN">
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src chrome:; object-src 'none'" />
+    <meta name="color-scheme" content="light dark" />
+    <title data-l10n-id="certerror-sts-page-title">未连接：有安全风险</title>
+    <link rel="stylesheet" href="chrome://global/skin/aboutNetError.css" type="text/css" media="all" />
+    <link rel="icon" id="favicon" href="chrome://global/skin/icons/warning.svg" />
+    <link rel="localization" href="branding/brand.ftl" />
+    <link rel="localization" href="toolkit/neterror/certError.ftl" />
+    <link rel="localization" href="toolkit/neterror/netError.ftl" />
+  </head>
+
+  <body class="badStsCert certerror" code="SEC_ERROR_UNKNOWN_ISSUER">
+    <!-- PAGE CONTAINER (for styling purposes only) -->
+    <div class="container">
+      <div id="text-container">
+        <!-- Error Title -->
+        <div class="title">
+          <h1 class="title-text" data-l10n-id="nssBadCert-sts-title">未连接：有潜在的安全问题</h1>
+        </div>
+
+        <!-- Short Description -->
+        <p id="errorShortDesc" data-l10n-args="{&quot;hostname&quot;:&quot;discord.com&quot;}" data-l10n-id="certerror-sts-intro">Firefox Developer Edition 检测到潜在的安全威胁，并因 <b>github.io</b> 要求安全连接而没有继续。</p>
+        <p id="errorShortDesc2"></p>
+
+        <div id="errorWhatToDo">
+          <p id="errorWhatToDoTitle" data-l10n-id="certerror-what-can-you-do-about-it-title">您可以做什么？</p>
+          <p id="badStsCertExplanation" data-l10n-args="{&quot;hostname&quot;:&quot;discord.com&quot;}" data-l10n-id="certerror-what-should-i-do-bad-sts-cert-explanation"><b>github.io</b> 启用了被称为 HTTP 严格传输安全（HSTS）的安全策略，Firefox Developer Edition 只能与其建立安全连接。您无法为此网站添加例外，以访问此网站。</p>
+          <p id="errorWhatToDoText"><p data-l10n-id="certerror-unknown-issuer-what-can-you-do-about-it-website">这个问题大多与网站有关，无法通过您的操作解决。</p><p data-l10n-id="certerror-unknown-issuer-what-can-you-do-about-it-contact-admin">如果您是在使用公司网络或某些防病毒软件时遇到此问题，可考虑联系客服（技术支持）以寻求帮助。您也可以向网站管理员告知此问题。</p></p>
+        </div>
+
+        <!-- Long Description -->
+        <div id="errorLongDesc"></div>
+
+        <p id="trrOnlyContainer" hidden="">
+          <p id="trrOnlyMessage"></p>
+          <div class="trr-message-container">
+            <span id="trrOnlyDescription"></span>
+            <p id="trrLearnMoreContainer" hidden="">
+              <a id="trrOnlylearnMoreLink" target="_blank" rel="noopener noreferrer" data-l10n-id="neterror-learn-more-link">详细了解…</a>
+            </p>
+          </div>
+          <p data-l10n-id="neterror-dns-not-found-trr-third-party-warning">您可以继续使用不安全的 DNS 解析器，但第三方将有可能得知您访问过哪些网站。</p>
+        </p>
+
+        <p id="nativeFallbackContainer" hidden="">
+          <p id="nativeFallbackMessage"></p>
+          <div class="native-fallback-message-container">
+            <span id="nativeFallbackDescription"></span>
+            <p id="nativeFallbackLearnMoreContainer" hidden="">
+              <a id="nativeFallbackLearnMoreLink" target="_blank" rel="noopener noreferrer" data-l10n-id="neterror-learn-more-link">详细了解…</a>
+            </p>
+          </div>
+          <p data-l10n-id="neterror-dns-not-found-trr-third-party-warning">您可以继续使用不安全的 DNS 解析器，但第三方将有可能得知您访问过哪些网站。</p>
+        </p>
+
+        <p id="tlsVersionNotice" hidden=""></p>
+
+        <p id="learnMoreContainer">
+          <a id="learnMoreLink" target="_blank" rel="noopener noreferrer" data-telemetry-id="learn_more_link" data-l10n-id="neterror-learn-more-link" href="home.html">开个玩笑...</a>
+        </p>
+
+        <div id="openInNewWindowContainer" class="button-container" hidden="">
+          <p><a id="openInNewWindowButton" target="_blank" rel="noopener noreferrer">
+          <button class="primary" data-l10n-id="open-in-new-window-for-csp-or-xfo-error">在新窗口中打开网站</button></a></p>
+        </div>
+
+        <!-- UI for option to report certificate errors to Mozilla. Removed on
+             init for other error types .-->
+        <div id="prefChangeContainer" class="button-container" hidden="">
+          <p data-l10n-id="neterror-pref-reset">看来可能是您的网络安全设置造成了此问题。您想还原到默认设置吗？</p>
+          <button id="prefResetButton" class="primary" data-l10n-id="neterror-pref-reset-button">恢复默认设置</button>
+        </div>
+
+        <div id="certErrorAndCaptivePortalButtonContainer" class="button-container"><button id="returnButton" class="primary" data-telemetry-id="return_button_top" data-l10n-id="neterror-return-to-previous-page-button">后退</button>
+          
+          <button id="openPortalLoginPageButton" class="primary" data-l10n-id="neterror-open-portal-login-page-button" hidden="">打开网络登录页面</button>
+          <button id="certErrorTryAgainButton" class="primary try-again" data-l10n-id="neterror-try-again-button" hidden="">重试</button>
+          <button id="advancedButton" data-telemetry-id="advanced_button" data-l10n-id="neterror-advanced-button">高级…</button>
+        </div>
+      </div>
+
+      <div id="netErrorButtonContainer" class="button-container" hidden="">
+        <button class="primary try-again" data-l10n-id="neterror-try-again-button">重试</button>
+        <button id="trrExceptionButton" data-l10n-id="neterror-add-exception-button" hidden="">总是继续打开此网站</button>
+        <button id="trrSettingsButton" data-l10n-id="neterror-settings-button" hidden="">更改 DNS 设置</button>
+        <button id="nativeFallbackContinueThisTimeButton" data-l10n-id="neterror-trr-continue-this-time" hidden="">此次仍继续</button>
+        <button id="nativeFallbackIgnoreButton" data-l10n-id="neterror-disable-native-feedback-warning" hidden="">总是继续打开</button>
+      </div>
+
+      <div class="advanced-panel-container">
+        <div id="badCertAdvancedPanel" class="advanced-panel" hidden="">
+          <p id="badCertTechnicalInfo"><label data-l10n-id="cert-error-trust-unknown-issuer-intro">可能有人试图冒充该网站，您不应该继续访问。</label>
+ 
+<label data-l10n-args="{&quot;hostname&quot;:&quot;discord.com&quot;}" data-l10n-id="cert-error-trust-unknown-issuer">各个网站通过证书证明自己的身份。Firefox Developer Edition 不信任 discord.com，因其证书颁发者未知、证书为自签名的，或者服务器未发送正确的中间证书。</label>
+ 
+<label data-l10n-args="{&quot;error&quot;:&quot;SEC_ERROR_UNKNOWN_ISSUER&quot;}" data-l10n-id="cert-error-code-prefix-link">错误代码：<a id="errorCode" data-l10n-name="error-code-link" data-telemetry-id="error_code_link" href="#certificateErrorDebugInformation">SEC_ERROR_UNKNOWN_ISSUER</a></label>
+ 
+</p>
+          <a id="viewCertificate" href="javascript:void(0)" data-l10n-id="neterror-view-certificate-link">查看证书</a>
+          <div id="advancedPanelButtonContainer" class="button-container">
+            <button id="advancedPanelReturnButton" class="primary" data-telemetry-id="return_button_adv" data-l10n-id="neterror-return-to-previous-page-button">后退</button>
+            <button id="advancedPanelTryAgainButton" class="primary try-again" data-l10n-id="neterror-try-again-button" hidden="">重试</button>
+            <button id="exceptionDialogButton" data-telemetry-id="exception_button" data-l10n-id="neterror-override-exception-button" hidden="">接受风险并继续</button>
+          </div>
+        </div>
+
+        <div id="blockingErrorReporting" class="advanced-panel" hidden="">
+          <p class="toggle-container-with-text">
+            <input type="checkbox" id="automaticallyReportBlockingInFuture" role="checkbox" />
+            <label for="automaticallyReportBlockingInFuture" data-l10n-id="neterror-error-reporting-automatic">报告此类错误，帮助 Mozilla 识别与拦截恶意网站</label>
+          </p>
+        </div>
+
+        <div id="certificateErrorDebugInformation" class="advanced-panel" hidden="">
+          <button id="copyToClipboardTop" data-telemetry-id="clipboard_button_top" data-l10n-id="neterror-copy-to-clipboard-button">复制文本到剪贴板</button>
+          <div id="certificateErrorText">https://discord.com/
+
+
+
+对等端的证书颁发者不受认可。
+
+
+
+HTTP 严格传输安全（HSTS）：true
+
+HTTP 公钥固定：false
+
+
+
+证书链：
+
+
+
+-----BEGIN CERTIFICATE-----
+
+1145141919810HOMO
+-----END CERTIFICATE-----
+
+</div>
+          <button id="copyToClipboardBottom" data-telemetry-id="clipboard_button_bot" data-l10n-id="neterror-copy-to-clipboard-button">复制文本到剪贴板</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="chrome://global/content/neterror/aboutNetErrorCodes.js"></script>
+  <script type="module" src="chrome://global/content/aboutNetError.mjs"></script>
+</html>

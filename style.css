@@ -110,7 +110,6 @@ html, body {
 }
 
 .vista2{
-	
 	border-radius: 5px;
 	border: 1px solid #e8e8e8;
 	padding: 2px;
@@ -186,6 +185,31 @@ html, body {
 
 .ggvista1:hover {
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+.tsvista1 {
+	border-radius: 5px;
+	border: 1px solid #404040;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	z-index: 1144;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.tsvista1:hover {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+.tsvista2{
+	border-radius: 5px;
+	border: 1px solid #e8e8e8;
+	padding: 2px;
+	backdrop-filter: blur(3px);
+	background: url(https://pic.imgdb.cn/item/64a489b31ddac507cc4f6626.png);
+	background-attachment: fixed,local,local;
 }
 
 .zxh {

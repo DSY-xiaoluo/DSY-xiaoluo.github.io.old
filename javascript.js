@@ -25,25 +25,35 @@ vistaDivs.forEach(function(div) {
     document.documentElement.style.userSelect = 'none';
   }
 
-  function dragMove(e) {
-    e.preventDefault();
-    if (isDragging) {
-      var clientX, clientY;
-      if (e.type === 'touchmove') {
-        // 计算拖动中的位置（触摸设备）
-        clientX = e.touches[0].clientX;
-        clientY = e.touches[0].clientY;
-      } else {
-        // 计算拖动中的位置（鼠标设备）
-        clientX = e.clientX;
-        clientY = e.clientY;
-      }
+function dragMove(e) {
+  e.preventDefault(); // 阻止默认的滚动行为
+  if (isDragging) {
+    var clientX, clientY;
+    if (e.type === 'touchmove') {
+      // 计算拖动中的位置（触摸设备）
+      clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
 
-      // 设置 div 的新位置
-      div.style.left = (clientX - offsetX) + 'px';
-      div.style.top = (clientY - offsetY - 20) + 'px';
+      // 判断是否需要滚动页面
+      var element = document.elementFromPoint(clientX, clientY);
+      if (element && (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA')) {
+        // 如果拖动的是输入框或文本区域，则允许页面滚动
+        document.body.style.overflow = 'auto';
+      } else {
+        // 否则禁止页面滚动
+        document.body.style.overflow = 'hidden';
+      }
+    } else {
+      // 计算拖动中的位置（鼠标设备）
+      clientX = e.clientX;
+      clientY = e.clientY;
     }
+
+    // 设置 div 的新位置
+    div.style.left = (clientX - offsetX) + 'px';
+    div.style.top = (clientY - offsetY - 20) + 'px';
   }
+}
 
   function dragEnd() {
     isDragging = false;
@@ -65,16 +75,27 @@ vistaDivs.forEach(function(div) {
 // div隐藏 - 首
 
 // 获取按钮和要隐藏的 <div> 元素
-var hideBtn = document.getElementById("zxh");
-var targetDiv = document.getElementById("ad");
+var hideBtn1 = document.getElementById("zxh");
+var hideBtn2 = document.getElementById("zxhts");
+var targetDiv1 = document.getElementById("ad");
+var targetDiv2 = document.getElementById("ts");
 
 // 添加点击事件监听器
-hideBtn.addEventListener("click", function() {
+hideBtn1.addEventListener("click", function() {
   // 切换显示/隐藏状态
-  if (targetDiv.style.display === "none") {
-    targetDiv.style.display = "block";
+  if (targetDiv1.style.display === "none") {
+    targetDiv1.style.display = "block";
   } else {
-    targetDiv.style.display = "none";
+    targetDiv1.style.display = "none";
+  }
+});
+
+hideBtn2.addEventListener("click", function() {
+  // 切换显示/隐藏状态
+  if (targetDiv2.style.display === "none") {
+    targetDiv2.style.display = "block";
+  } else {
+    targetDiv2.style.display = "none";
   }
 });
 

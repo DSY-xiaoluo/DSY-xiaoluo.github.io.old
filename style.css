@@ -60,7 +60,8 @@ html, body {
 
 /*副标题*/
 .text2 {
-	position top: 50%;
+	position: absolute;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
@@ -91,6 +92,14 @@ html, body {
 /*正文-板块1-正文*/
 .text4 {
 	font-size: 16px;
+	color: black;
+	font-family: "sans";
+	line-height: 1;
+}
+
+/*正文-板块1-副正文*/
+.text6 {
+	font-size: 14px;
 	color: black;
 	font-family: "sans";
 	line-height: 1;
@@ -139,6 +148,18 @@ html, body {
 	border: 1px solid #404040;
 	background-color: #e8e8e8;
 	padding: 10px;
+}
+
+.vista6{
+	border: 1px solid #404040;
+	border-radius: 2px;
+	margin: 3px;
+}
+
+.vista7{
+	border: 1px solid #d0d0d0;
+	border-radius: 1px;
+	background-color: #ffffffc0;
 }
 
 .navbarvista {

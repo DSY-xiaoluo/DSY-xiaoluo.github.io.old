@@ -7,7 +7,11 @@
 <head>
   <title>bedjava键位 | DSY_xiaoluo 's wwwebsite</title>
   <link rel="stylesheet" type="text/css" href="../style.css">
-  <link rel="stylesheet" type="text/css" href="github-markdown.css">
+  <link rel="stylesheet" href="github-markdown-css\github-markdown.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
 </head>
 
@@ -35,11 +39,11 @@
   <div style="height: 100px;"></div>
   <div class="vista1">
     <div class="vista2">
-      <p class="vista3">测试test</p>
+      <p class="vista3">bedjava键位/p>
       <div class="vista6">
         <div class="vista7">
-          <a href="../home.html">DSY_xiaoluo 's wwwebsite</a> > <a href="../blog.html">博客</a> > Minecraft > 其它 > <a
-            href="1.html">1</a>
+          <a href="../home.html">DSY_xiaoluo 's wwwebsite</a> > <a href="../blog.html">博客</a> > 其它 > 其它 > <a
+            href="114514.html">1</a>
         </div>
       </div>
       <div class="vista4">
@@ -55,6 +59,7 @@
                 const converter = new showdown.Converter();
                 const html = converter.makeHtml(markdownText);
                 markdownContentDiv.innerHTML = html;
+                hljs.highlightAll();
               });
           </script>
         </div>

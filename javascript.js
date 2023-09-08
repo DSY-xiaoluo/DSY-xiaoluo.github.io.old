@@ -33,7 +33,7 @@ vistaDivs.forEach(function (div) {
         // 计算拖动中的位置（触摸设备）
         clientX = e.touches[0].clientX;
         clientY = e.touches[0].clientY;
-
+  
         // 判断是否需要滚动页面
         var element = document.elementFromPoint(clientX, clientY);
         if (element && (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA')) {
@@ -48,13 +48,16 @@ vistaDivs.forEach(function (div) {
         clientX = e.clientX;
         clientY = e.clientY;
       }
-
+  
       // 设置 div 的新位置
       div.style.left = (clientX - offsetX) + 'px';
       div.style.top = (clientY - offsetY - 20) + 'px';
+    } else {
+      // 拖动结束时，允许页面滚动
+      document.body.style.overflow = 'auto';
     }
   }
-
+  
   function dragEnd() {
     isDragging = false;
     // 启用用户选择文本

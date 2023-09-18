@@ -1,0 +1,71 @@
+<!--
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>对我动态骂AB233事件的全部记录 | DSY_xiaoluo 's wwwebsite</title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" href="github-markdown-css\github-markdown-light.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+</head>
+
+<body>
+  <!--导航栏-->
+  <div class="navbarvista">
+    <div class="navbarvista2">
+      <div class="logo" style="height: 64px;">
+        <img src="https://pic.imgdb.cn/item/64e5b0f8661c6c8e540e4409.png" alt="logo" width="64" height="64"
+          onclick="window.location.href='pages/ikun.html'"></img>
+        <!--https://pic.imgdb.cn/item/64a307381ddac507ccc59c31.png-->
+        <p
+          style="font-family: 'sans'; font-size: 24px; margin-left: 0px; text-shadow: 2px 2px 5px #000000;margin-bottom: auto;margin-top: auto;">
+          DSY_xiaoluo</p>
+      </div>
+      <div class="nav-links">
+        <a href="../home.html" class="nav-link">首页</a>
+        <a href="../blog.html" class="nav-link-e">博客</a>
+        <a href="../pages.html" class="nav-link">页面</a>
+        <a href="../about.html" class="nav-link">关于</a>
+      </div>
+    </div>
+  </div>
+  <!--/导航栏-->
+  <div style="height: 100px;"></div>
+  <div class="vista1">
+    <div class="vista2">
+      <p class="vista3">对我动态骂AB233事件的全部记录</p>
+      <div class="vista6">
+        <div class="vista7">
+          <a href="../home.html">DSY_xiaoluo 's wwwebsite</a> > <a href="../blog.html">博客</a> > 其它 > 其它 > <a
+            href="2.html">2</a>
+        </div>
+      </div>
+      <div class="vista4">
+        <div class="vista5" style="padding: 1px;">
+          <div id="markdownContent" class="markdown-body"></div>
+          <script>
+            const markdownUrl = 'md/2.md';
+            const markdownContentDiv = document.getElementById('markdownContent');
+
+            fetch(markdownUrl)
+              .then(response => response.text())
+              .then(markdownText => {
+                const converter = new showdown.Converter();
+                const html = converter.makeHtml(markdownText);
+                markdownContentDiv.innerHTML = html;
+                hljs.highlightAll();
+              });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

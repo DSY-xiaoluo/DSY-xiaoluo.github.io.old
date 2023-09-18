@@ -8,6 +8,7 @@ html, body {
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
+	word-wrap: break-word;
 	/*
 	background: linear-gradient(to right, #00ffff, #00ff80); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
 	*/
@@ -160,6 +161,7 @@ html, body {
 	border: 1px solid #d0d0d0;
 	border-radius: 1px;
 	background-color: #ffffffc0;
+	font-family: "msyh";
 }
 
 .navbarvista {
